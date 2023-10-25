@@ -4296,7 +4296,7 @@ app.header = {
       });
       $(".header__nav__nav li").each(function() {
         if ($(this).find("ul").length || $(this).is("[supernav]")) {
-          return $(this).children("a").append("<span class='fa fa-angle-right'></span>");
+          return $(this).children("a").append("<span class='fa fa-angle-down'></span>");
         }
       });
       $(".header__nav__nav a").on('click', function(e) {
@@ -4859,7 +4859,7 @@ app.slider = {
 app.swiper = {
   init: function() {
     var swiper;
-    swiper = new Swiper('.swiper-clients', {
+    swiper = new Swiper('.swiper-images', {
       loop: true,
       autoplay: {
         delay: 5000
@@ -4879,18 +4879,13 @@ app.swiper = {
           slidesPerGroup: 1
         },
         900: {
-          slidesPerView: 4,
-          spaceBetween: 0,
-          slidesPerGroup: 1
-        },
-        1400: {
-          slidesPerView: 5,
-          spaceBetween: 0,
+          slidesPerView: 2,
+          spaceBetween: 20,
           slidesPerGroup: 1
         }
       }
     });
-    return swiper = new Swiper('.swiper-partners', {
+    return swiper = new Swiper('.swiper-testimonies', {
       loop: true,
       autoplay: {
         delay: 5000
@@ -4910,8 +4905,8 @@ app.swiper = {
           slidesPerGroup: 1
         },
         900: {
-          slidesPerView: 4,
-          spaceBetween: 0,
+          slidesPerView: 1,
+          spaceBetween: 20,
           slidesPerGroup: 1
         }
       }
